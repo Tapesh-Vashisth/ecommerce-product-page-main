@@ -1,0 +1,97 @@
+    <div class="cart-avatar">
+        <div class="cart-icon">
+            <span class="count">0</span>
+            <img src="media/images/icon-cart.svg" alt="cart">
+        </div>
+        <div class="cart-content">
+            <h2>Card</h2>
+            <hr>
+            {{#if cart.length}}
+                <div class="items">
+                    {{#each cart}}
+                        <div class="cart-item">
+                            <img src="media/images/image-product-1-thumbnail.jpg" alt="item">
+                            <div>
+                                <p>{{title}}</p>
+                                <p>${{cost}} x <span>{{quantity}}</span> <strong>${{total}}</strong></p>
+                            </div>
+                            <img src="media/images/icon-delete.svg" alt="X" class="delete-cart-icon">
+                        </div>
+                    {{/each}}
+                    <button class="checkout">Checkout</button>
+                </div>
+            {{else}}
+                <div class="empty">
+                    <p>Your cart is empty</p>
+                </div>
+            {{/if}} 
+        </div>
+        <div class="avatar">
+            <img src="media/images/image-avatar.png" alt="pic">
+        </div>
+    </div>
+</header>
+<hr>
+<div class="main">
+    <section class="slideshow">
+        <div class="mainview">
+            <div class="previous">
+                <img src="media/images/icon-previous.svg" alt="<">
+            </div>
+            <img src="media/images/image-product-1.jpg" alt="sneaker" class="show general">
+            <div class="next">
+                <img src="media/images/icon-next.svg" alt=">">
+            </div>
+        </div>
+        <div class="rest general">
+            <img src="media/images/image-product-1-thumbnail.jpg" alt="thumbnail-1">
+            <img src="media/images/image-product-2-thumbnail.jpg" alt="thumbnail-2">
+            <img src="media/images/image-product-3-thumbnail.jpg" alt="thumbnail-3">
+            <img src="media/images/image-product-4-thumbnail.jpg" alt="thumbnail-4">
+        </div>
+
+        <div class="extendedview">
+            <img src="media/images/icon-close.svg" alt="X" class="extend-close">
+            <div class="mainview box-shadow">
+                <div class="previous" id="extendprev">
+                    <img src="media/images/icon-previous.svg" alt="<">
+                </div>
+                <img src="media/images/image-product-1.jpg" alt="sneaker" class="show extend-show">
+                <div class="next" id="extendnext">
+                    <img src="media/images/icon-next.svg" alt=">">
+                </div>
+            </div>
+            <div class="rest rest-ext">
+                <img src="media/images/image-product-1-thumbnail.jpg" alt="thumbnail-1">
+                <img src="media/images/image-product-2-thumbnail.jpg" alt="thumbnail-2">
+                <img src="media/images/image-product-3-thumbnail.jpg" alt="thumbnail-3">
+                <img src="media/images/image-product-4-thumbnail.jpg" alt="thumbnail-4">
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="headings">
+            <h4>SNEAKER COMPANY</h4>
+            <h1 id="item-title">Fall Limited Edition Sneakers</h1>
+        </div>
+        <p class="details">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer
+        </p>
+        <div class="cost">
+            <div class="cur">
+                <h1 id="item-cost">$125.00</h1>
+                <p class="costtag">50%</p>
+            </div>
+            <div class="prev">
+                <p>$250.00</p>
+            </div>
+        </div>
+
+        <div class="amount">
+            <div class="controls"><button id="minus" class="colors">-</button><span class="colors">0</span><button id="plus" class="colors">+</button></div>           
+            <div class="btn">
+                <button><img src="media/images/icon-cart.svg" alt="cart">Add to cart</button>
+            </div>
+        </div>
+    </section>
+</div>
